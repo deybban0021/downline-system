@@ -5,9 +5,12 @@
   <title>Downline Widget</title>
   <style>
     :root {
-      --primary-color: #000000; /* Black */
+      --primary-color: #ffffff; /* White for text */
       --secondary-color: #007bff; /* Blue */
       --accent-color: #ff69b4; /* Pink */
+      --widget-bg: #000000; /* Black for widget background */
+      --item-bg: #222222; /* Dark grey for list items and inputs */
+      --body-bg: #121212;  /* Dark background for body */
     }
 
     /* Basic Reset */
@@ -18,11 +21,12 @@
     }
     body {
       font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
+      background-color: var(--body-bg);
       padding: 20px;
+      color: var(--primary-color);
     }
     .downline-widget {
-      background: #fff;
+      background: var(--widget-bg);
       border: 1px solid var(--primary-color);
       border-radius: 6px;
       padding: 20px;
@@ -78,6 +82,10 @@
     .edit-profile-form input {
       padding: 6px;
       margin-right: 10px;
+      background: var(--item-bg);
+      color: var(--primary-color);
+      border: 1px solid var(--primary-color);
+      border-radius: 4px;
     }
     /* Downline section */
     .downline-section {
@@ -92,6 +100,10 @@
     }
     .downline-header select {
       padding: 5px;
+      background: var(--item-bg);
+      color: var(--primary-color);
+      border: 1px solid var(--primary-color);
+      border-radius: 4px;
     }
     .downline-header button {
       padding: 6px 10px;
@@ -114,7 +126,7 @@
       border-radius: 6px;
       padding: 10px;
       margin-bottom: 8px;
-      background: #fafafa;
+      background: var(--item-bg);
     }
     .downline-details {
       display: flex;
@@ -141,10 +153,10 @@
       background: #e65aab;
     }
     .delete-btn {
-      background: var(--primary-color);
+      background: var(--secondary-color);
     }
     .delete-btn:hover {
-      background: #000;
+      background: #0069d9;
     }
     /* Add/Edit downline form (mini form) */
     .modal-overlay {
@@ -160,7 +172,7 @@
       z-index: 9999;
     }
     .modal-content {
-      background: #fff;
+      background: var(--widget-bg);
       padding: 20px;
       border-radius: 6px;
       width: 300px;
@@ -182,6 +194,10 @@
       width: 100%;
       padding: 6px;
       margin-bottom: 10px;
+      background: var(--item-bg);
+      color: var(--primary-color);
+      border: 1px solid var(--primary-color);
+      border-radius: 4px;
     }
     .modal-actions {
       display: flex;
@@ -202,10 +218,10 @@
       background: #0069d9;
     }
     .modal-cancel-btn {
-      background: var(--primary-color);
+      background: var(--secondary-color);
     }
     .modal-cancel-btn:hover {
-      background: #000;
+      background: #0069d9;
     }
   </style>
 </head>
